@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/proc": {
+      "name": "/proc",
+      "lambdaFunction": "gnssProc",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

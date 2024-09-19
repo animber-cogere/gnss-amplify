@@ -1,0 +1,53 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gnss-dev-131927-authRole",
+      "UnauthRoleArn": "arn:aws:iam::114700623054:role/amplify-gnss-dev-131927-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::114700623054:role/amplify-gnss-dev-131927-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-gnss-dev-131927-deployment",
+      "UnauthRoleName": "amplify-gnss-dev-131927-unauthRole",
+      "StackName": "amplify-gnss-dev-131927",
+      "StackId": "arn:aws:cloudformation:us-east-1:114700623054:stack/amplify-gnss-dev-131927/d90a0d00-a10f-11ee-babe-0a722d2ab069",
+      "AmplifyAppId": "d18fxjukbatm3q",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-gnss-dev-131927-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "function": {
+        "gnssFetch": {
+          "deploymentBucketName": "amplify-gnss-dev-131927-deployment",
+          "s3Key": "amplify-builds/gnssFetch-634a6630704f79516348-build.zip"
+        },
+        "S3Triggere8706912": {
+          "deploymentBucketName": "amplify-gnss-dev-131927-deployment",
+          "s3Key": "amplify-builds/S3Triggere8706912-78466b7935522f786a65-build.zip"
+        },
+        "gnssProc": {
+          "deploymentBucketName": "amplify-gnss-dev-131927-deployment",
+          "s3Key": "amplify-builds/gnssProc-2b754939645462647234-build.zip"
+        }
+      },
+      "auth": {
+        "gnss": {}
+      },
+      "api": {
+        "gnssAPI": {},
+        "gnssProc": {}
+      },
+      "storage": {
+        "gnssS3": {},
+        "gnss46fdc683": {
+          "bucketName": "gnss-s3",
+          "region": "us-east-1"
+        },
+        "gnss": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d18fxjukbatm3q",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "api": {
+    "gnssAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "gnssFetch"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "gnssProc": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "gnssProc"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "gnss": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed"
+    }
+  },
+  "function": {
+    "S3Triggere8706912": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "gnssFetch": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "gnssProc": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "providerPlugin": "awscloudformation",
+      "service": "amplifyhosting",
+      "type": "manual"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_S3Triggere8706912_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggere8706912"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Triggere8706912_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggere8706912"
+        }
+      ]
+    },
+    "AMPLIFY_function_gnssFetch_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gnssFetch"
+        }
+      ]
+    },
+    "AMPLIFY_function_gnssFetch_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gnssFetch"
+        }
+      ]
+    },
+    "AMPLIFY_function_gnssProc_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gnssProc"
+        }
+      ]
+    },
+    "AMPLIFY_function_gnssProc_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gnssProc"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_appId": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_type": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_storage_gnss46fdc683_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "gnss46fdc683"
+        }
+      ]
+    },
+    "AMPLIFY_storage_gnss46fdc683_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "gnss46fdc683"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "gnss": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.link-style {
+  color: blue; /* Link color */
+  text-decoration: underline; /* Underline to mimic link style */
+  cursor: pointer; /* Show a pointer cursor on hover to indicate interactivity */
+}
+
+.link-style:hover {
+  color: darkblue !important; /* Link color */
+  text-decoration: underline; /* Underline to mimic link style */
+  cursor: pointer; /* Show a pointer cursor on hover to indicate interactivity */
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/stop": {
+      "name": "/stop",
+      "lambdaFunction": "gnssStop",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

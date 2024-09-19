@@ -1,0 +1,14 @@
+{
+  "resourceName": "gnss",
+  "policyUUID": "700e45bd",
+  "bucketName": "gnss-s3",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
